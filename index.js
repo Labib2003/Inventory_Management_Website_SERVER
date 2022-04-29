@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const port = process.env.PORT || 5000;
 
 const app = express();
@@ -18,11 +18,19 @@ async function run() {
         await client.connect();
         const productCollection = client.db('cricket-freak-warehouse-database').collection('products');
 
-        // get all API
+        // all products API
         app.get('/products', async (req, res) => {
             const cursor = productCollection.find({});
             const products = await cursor.toArray();
             res.send(products);
+        });
+
+        // product by id
+        app.get('/products/:id', async (req, res) => {
+            const id = req.params.id;
+            //const query = { _id: ObjectId(id) };
+            const product = await productCollection.findOne({ _id: ObjectId(id) });
+            res.send(product);
         })
     }
     finally {
@@ -32,6 +40,8 @@ async function run() {
 run().catch(console.dir);
 
 // https://floating-retreat-93986.herokuapp.com/
+
+//test API
 app.get('/', (req, res) => {
     res.send('Server created!');
 });
