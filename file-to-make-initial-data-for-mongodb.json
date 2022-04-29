@@ -1,0 +1,74 @@
+[
+    {
+        "name": "CM Tornado F50",
+        "image": "https://m.media-amazon.com/images/I/71xFzgqlAhL._AC_SX679_.jpg",
+        "description": "CM Tornado F50 Supreme - Grade A Cricket Ball These are grade a cricket balls. Best quality balls offered by CM brand",
+        "price": 20,
+        "quantity": 200,
+        "supplier": "CM Tornado"
+    },
+    {
+        "name": "KOOKABURRA Gold King",
+        "image": "https://m.media-amazon.com/images/I/61wzVklPxVL._AC_SX679_.jpg",
+        "description": "KOOKABURRA Gold King Cricket Ball, Red. Icc Approved Kookaburra Cricket Ball. Ideal For All Type Of Cricket Game Format",
+        "price": 25,
+        "quantity": 100,
+        "supplier": "KOOKABURRA"
+    },
+    {
+        "name": "AMBER Sporting Goods Super",
+        "image": "https://m.media-amazon.com/images/I/71xFzgqlAhL._AC_SX679_.jpg",
+        "description": "AMBER Sporting Goods Super County Cricket Leather Ball. Made from Top Quality alum tanned Leather and tallow dipped. Natural Cork Center wrapped with quality 6/7 layers wool",
+        "price": 15,
+        "quantity": 150,
+        "supplier": "AMBER"
+    },
+    {
+        "name": "Gunn & Moore Diamond 909",
+        "image": "https://m.media-amazon.com/images/I/81ufn6YtP+L._AC_SX679_.jpg",
+        "description": "Gunn & Moore Diamond 909 Cricket Bat, Short Handle. Shortened L540 blade design for dynamic sweet spot. Power arc bow face profile. Traditional full blade profile",
+        "price": 50,
+        "quantity": 20,
+        "supplier": "Gunn & Moore"
+    },
+    {
+        "name": "SS Tiger English Willow",
+        "image": "https://m.media-amazon.com/images/I/61nM28VcIBL._AC_SX679_.jpg",
+        "description": "SS Tiger English Willow Cricket bat (2019 Edition). SS TIGER English willow cricket bat is made of Grade 4 selected English willow that is light weight and is good for entry level and club players",
+        "price": 60,
+        "quantity": 30,
+        "supplier": "SS"
+    },
+    {
+        "name": "MRF Legend VK 18 1.0",
+        "image": "https://m.media-amazon.com/images/I/51lthWuIgqL._AC_SX679_.jpg",
+        "description": "MRF Legend VK 18 1.0 Cricket Bat, red, Short Handle. Prototype of the MRF brand ambassador's bat. ",
+        "price": 45,
+        "quantity": 60,
+        "supplier": "MRF"
+    },
+    {
+        "name": "Fortress Wooden Cricket Stumps",
+        "image": "https://m.media-amazon.com/images/I/81TY0958glL._AC_SX679_.jpg",
+        "description": "Professional Timber Stumps for Competitive Cricket. Expertly manufactured using polished mango wood, these high-quality cricket stumps are ideal for schools & local club cricket. Carry bag included.",
+        "price": 50,
+        "quantity": 20,
+        "supplier": "Fortress"
+    },
+    {
+        "name": "C2C Wooden Cricket Stumps with Bails",
+        "image": "https://m.media-amazon.com/images/I/61hjHL0vmUL._AC_SY879_.jpg",
+        "description": "C2C Wooden Cricket Stumps with Bails (3 Wickets, 2 Bails). Wooden stumps. Material: Wood. Make your game that little bit of more fun",
+        "price": 40,
+        "quantity": 50,
+        "supplier": "C2C"
+    },
+    {
+        "name": "KOOKABURRA Pro Stumps",
+        "image": "https://m.media-amazon.com/images/I/717xXURjygL._AC_SX679_.jpg",
+        "description": "KOOKABURRA Pro Stumps- Senior 28 inch (GK040). 2020 Kookaburra Pro Stumps- Senior 28 made from premium quality wood.",
+        "price": 60,
+        "quantity": 20,
+        "supplier": "KOOKABURRA"
+    }
+]
