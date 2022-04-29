@@ -7,6 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// https://floating-retreat-93986.herokuapp.com/
 app.get('/', (req, res) => {
     res.send('Server created!');
 });
