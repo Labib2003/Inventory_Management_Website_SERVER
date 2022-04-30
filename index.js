@@ -11,7 +11,7 @@ app.use(express.json());
 
 // mongodb connection
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.dkxwe.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 }); 
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 async function run() {
     try {
@@ -32,7 +32,7 @@ async function run() {
             res.send(product);
         });
 
-        // decrease quantity by one
+        // update quantity
         app.patch('/products/:id', async (req, res) => {
             const id = req.params.id;
             const body = req.body;
@@ -49,7 +49,16 @@ async function run() {
                 `${result.matchedCount} document(s) matched the filter, updated ${result.modifiedCount} document(s)`,
             );
             res.send(result);
-        })
+        });
+
+        // delete product api
+        app.delete('/products/:id', async (req, res) => {
+            const id = req.params.id;
+            console.log(id);
+            const query = { _id: ObjectId(id) };
+            const result = await productCollection.deleteOne(query);
+            res.send(result);
+        });
     }
     finally {
 
