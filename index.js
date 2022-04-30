@@ -65,7 +65,15 @@ async function run() {
             const newProduct = req.body;
             const result = await productCollection.insertOne(newProduct);
             res.send(result);
-        })
+        });
+
+        // items added by a specific user
+        app.get('/myItems', async (req, res) => {
+            const query = { user: req.query.email };
+            const cursor = productCollection.find(query);
+            const result = await cursor.toArray();
+            res.send(result);
+        });
     }
     finally {
 
