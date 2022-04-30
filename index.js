@@ -30,6 +30,25 @@ async function run() {
             const id = req.params.id;
             const product = await productCollection.findOne({ _id: ObjectId(id) });
             res.send(product);
+        });
+
+        // decrease quantity by one
+        app.patch('/products/:id', async (req, res) => {
+            const id = req.params.id;
+            const body = req.body;
+            console.log(body);
+            const filter = { _id: ObjectId(id) };
+            const options = { upsert: true };
+            const updatedQuantity = {
+                $set: {
+                    quantity: body.quantity
+                },
+            };
+            const result = await productCollection.updateOne(filter, updatedQuantity, options);
+            console.log(
+                `${result.matchedCount} document(s) matched the filter, updated ${result.modifiedCount} document(s)`,
+            );
+            res.send(result);
         })
     }
     finally {
