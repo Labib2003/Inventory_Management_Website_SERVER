@@ -19,6 +19,7 @@ async function run() {
         await client.connect();
         const productCollection = client.db('cricket-freak-warehouse-database').collection('products');
         const blogsCollection = client.db('cricket-freak-warehouse-database').collection('blogs');
+        const bugCollection = client.db('cricket-freak-warehouse-database').collection('bugs');
 
         //auth
         app.post('/login', async (req, res) => {
@@ -95,6 +96,21 @@ async function run() {
             const blogs = await cursor.toArray();
             res.send(blogs);
         });
+
+        // report bug api
+        app.post('/bugs', async (req, res) => {
+            const bug = req.body;
+            const result = await bugCollection.insertOne(bug);
+            res.send(result);
+        });
+
+        // get bugs
+        app.get('/bugs', async (req, res) => {
+            const cursor = bugCollection.find({});
+            const result = await cursor.toArray();
+            res.send(result);
+        })
+
     }
     finally {
 
