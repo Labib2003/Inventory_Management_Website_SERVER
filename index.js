@@ -89,7 +89,7 @@ async function run() {
             }
         });
 
-        // blogs api
+        // get blogs api
         app.get('/blogs', async (req, res) => {
             const cursor = blogsCollection.find({});
             const blogs = await cursor.toArray();
