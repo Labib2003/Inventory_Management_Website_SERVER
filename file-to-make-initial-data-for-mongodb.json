@@ -79,5 +79,21 @@
         "price": 60,
         "quantity": 20,
         "supplier": "KOOKABURRA"
+    },
+    {
+        "title": "Difference between javascript and nodejs",
+        "body": "Javascript is a programming language used to add functionality to a webpage. It can be ran in the server or in a server/local computer using Nodejs. Which is a javascript runtime environment that runs javascript code outside the browser."
+    },
+    {
+        "title": "When should you use nodejs and when should you use mongodb",
+        "body": "Nodejs allows us to use javascript for server side back end purposes. So if we want to use javascript as our back end language, we should use nodejs. Mongodb is a noSQL database system. If the data that we are handeling is document based and usually represented in a format like JSON or XML, we should use mongodb."
+    },
+    {
+        "title": "Differences between sql and nosql databases.",
+        "body": "sql databases use structured query languages, they store table based data that are vertically scalable, they are better for multi-row transactions. nosql databases store unstructured data like documents that are horizontallh scaleable, they are better for unstructured data like json or documents."
+    },
+    {
+        "title": "What is the purpose of jwt and how does it work",
+        "body": "jwt is a system to protect data stored in the server so that only autorized users can access certain data. It uses the users information and a secret key to generate an encrypted token that can be decrypted only with that specific secret key. The secret key is stored in the server and never shared. When a user logs in, the server uses the info and the secret to generate a token. This token is stored in the client browser. When the user tries to access a protected data, the token is sent with the http request. The server decodes the token and if the decoded token matches with the users info, it provides the data."
     }
 ]

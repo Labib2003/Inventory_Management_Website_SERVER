@@ -18,6 +18,7 @@ async function run() {
     try {
         await client.connect();
         const productCollection = client.db('cricket-freak-warehouse-database').collection('products');
+        const blogsCollection = client.db('cricket-freak-warehouse-database').collection('blogs');
 
         //auth
         app.post('/login', async (req, res) => {
@@ -83,9 +84,16 @@ async function run() {
                 const result = await cursor.toArray();
                 res.send(result);
             }
-            else{
+            else {
                 res.send([]);
             }
+        });
+
+        // blogs api
+        app.get('/blogs', async (req, res) => {
+            const cursor = blogsCollection.find({});
+            const blogs = await cursor.toArray();
+            res.send(blogs);
         });
     }
     finally {
